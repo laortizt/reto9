@@ -20,17 +20,27 @@ h1 {
 }
 
 .box {
-  background-color: steelblue;
+  display: flex;/*aqui*/
+  align-items: center;/*aqui*/
+  justify-content: center; /*aqui*/
+  background-color: steelblue; /*aqui*/
   color: #fff;
   width: 400px;
   height: 200px;
   margin: 10px;
+  border-radius: 10px; /*aqui*/
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3); /*aqui*/
+  transform: translateX(400%); /*aqui*/
+  transition: transform 0.4s ease; /*aqui*/
+
 }
 
 .box:nth-of-type(even) {
+  transform: translateX(-400%); /*AQUI*/
 }
 
 .box.show {
+  transform: translateX(0); /*AQUI*/
 }
 
 .box h2 {
